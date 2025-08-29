@@ -1,0 +1,82 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {background: #e8f0fe; color: #333; }ا
+
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem 5%; 
+    background: #fff; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+}
+nav ul { display: flex; list-style: none; gap: 1.5rem; }
+nav a { text-decoration: none; color: #333; font-weight: 500; }
+nav a:hover { color: #4a6cf7; }
+hr { border: none; height: 1px; background: #eee; margin: 0; }
+
+.hero { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 3rem 5%; 
+    position: relative; 
+}
+.arrow { position: absolute; left: 5%; top: 20%; width: 60px; }
+.name { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.title { font-size: 2rem; color: #4a6cf7; margin-bottom: 1.5rem; }
+.herobtns { display: flex; gap: 1rem; }
+.hireme, .cv { 
+    padding: 0.7rem 1.2rem; 
+    border-radius: 30px; 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: all 0.3s; 
+}
+.hireme { background: #4a6cf7; color: white; }
+.hireme:hover { background: #3a5cd8; }
+.cv { background: transparent; color: #333; border: 1px solid #ddd; }
+.cv:hover { background: #f1f1f1; }
+.cv img { margin-left: 0.5rem; width: 14px; height: 14px; }
+.heroimg { width: 45%; max-width: 400px; }
+
+.aboutme, .works, .contactcontainer { 
+    padding: 3rem 5%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+.aboutme { background: #fff; }
+.aboutmeimg { width: 45%; max-width: 400px; }
+.texttitle, .projiecttitle, .contacttitle { 
+    display: flex; 
+    margin-bottom: 1rem; 
+}
+.abouttitle { color: #4a6cf7; margin-left: 0.5rem; }
+.light { margin-left: 0.5rem; width: 24px; height: 24px; }
+.aboutmepar { line-height: 1.6; color: #555; }
+
+.works ul { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1.5rem; 
+    list-style: none; 
+}
+.works img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+
+.contact { display: flex; flex-direction: column; gap: 1rem; }
+.emailqndphone { display: flex; align-items: center; gap: 0.5rem; }
+.emailqndphone img { width: 24px; height: 24px; }
+.emailqndphone a { text-decoration: none; color: #333; }
+
+/* الفوتر */
+footer { text-align: center; padding: 1.5rem; background: #f1f1f1; color: #555; }
+
+@media (max-width: 768px) {
+    header { flex-direction: column; gap: 1rem; }
+    nav ul { flex-direction: column; text-align: center; gap: 0.8rem; }
+    .hero, .aboutme { flex-direction: column; text-align: center; }
+    .herobtns { flex-direction: column; }
+    .heroimg, .aboutmeimg { width: 80%; margin-top: 1.5rem; }
+    .arrow { display: none; }
+    .works ul { grid-template-columns: 1fr; }
+}
